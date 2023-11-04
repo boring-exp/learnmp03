@@ -1,0 +1,16 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  weui-miniprogram:
+    specifier: ^1.2.10
+    version: 1.2.10
+
+packages:
+
+  /weui-miniprogram@1.2.10:
+    resolution: {integrity: sha512-BVT9zj4KBy55RcYaqqWigt23g0tuZAPeuxAo7Uv7G76/zuDMJbnnAmIj7kCwhSesMF8/7xLBt9J0r2GC1NzEPg==}
+    dev: false
