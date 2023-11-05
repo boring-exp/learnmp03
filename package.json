@@ -10,6 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@koa/cors": "^4.0.0",
+    "koa": "^2.14.2",
+    "koa-router": "^12.0.1",
+    "mysql2": "^3.6.3",
     "weui-miniprogram": "^1.2.10"
   }
 }
