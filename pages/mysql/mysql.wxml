@@ -3,28 +3,28 @@
         <mp-form id="form" models="{{formData}}">
             <mp-cells title="表单" footer="以上是获取的数据库信息">
                 <label>
-                    <mp-cell prop="dbname" title="名称" ext-class="">
-                        <input bindinput="formInputChange"  class="weui-input" />
+                    <mp-cell prop="dbname" title="名称">
+                        <input bindinput="formInputChange" data-key="dbname" value="{{formData.dbname}}"/>
                     </mp-cell>
                 </label>
                 <label>
-                    <mp-cell prop="dbip" title="IP" ext-class="">
-                        <input bindinput="formInputChange"  class="weui-input" />
+                    <mp-cell prop="dbip" title="IP" >
+                        <input bindinput="formInputChange"  data-key="dbip" value="{{formData.dbip}}" />
                     </mp-cell>
                 </label>
                 <label>
-                    <mp-cell prop="dbport" title="端口号" ext-class="">
-                        <input bindinput="formInputChange"  class="weui-input" />
+                    <mp-cell prop="dbport" title="端口号" >
+                        <input bindinput="formInputChange"  data-key="dbport" value="{{formData.dbport}}"/>
                     </mp-cell>
                 </label>
                 <label>
-                    <mp-cell prop="username" title="用户名" ext-class="">
-                        <input bindinput="formInputChange"  class="weui-input" />
+                    <mp-cell prop="username" title="用户名" >
+                        <input bindinput="formInputChange"  data-key="username" value="{{formData.username}}" />
                     </mp-cell>
                 </label>
                 <label>
-                    <mp-cell prop="password" title="密码" ext-class="">
-                        <input data-field="password" bindinput="formInputChange" class="weui-input" />
+                    <mp-cell prop="password" title="密码" >
+                        <input bindinput="formInputChange" data-key="password" value="{{formData.password}}"/>
                     </mp-cell>
                 </label>
             </mp-cells>
@@ -40,7 +40,7 @@
         </checkbox-group>
 
         <view slot="button">
-            <button class="weui-btn" type="primary" bindtap="submitForm">确定</button>
+            <button class="weui-btn" type="primary" bindtap="requestMysql">申请账号</button>
         </view>
     </mp-form-page>
 </view>
