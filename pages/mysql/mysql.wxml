@@ -1,2 +1,46 @@
-<!--pages/mysql/mysql.wxml-->
-<text>pages/mysql/mysql.wxml</text>
+<view>
+  <mp-form-page title="数据库账号申请" subtitle="使用声明：可以免费申请Mysql数据库账号，仅限学习使用，30天未连接自动删除账号，请勿保存生产数据">
+        <mp-form id="form" models="{{formData}}">
+            <mp-cells title="表单" footer="以上是获取的数据库信息">
+                <label>
+                    <mp-cell prop="dbname" title="名称" ext-class="">
+                        <input bindinput="formInputChange"  class="weui-input" />
+                    </mp-cell>
+                </label>
+                <label>
+                    <mp-cell prop="dbip" title="IP" ext-class="">
+                        <input bindinput="formInputChange"  class="weui-input" />
+                    </mp-cell>
+                </label>
+                <label>
+                    <mp-cell prop="dbport" title="端口号" ext-class="">
+                        <input bindinput="formInputChange"  class="weui-input" />
+                    </mp-cell>
+                </label>
+                <label>
+                    <mp-cell prop="username" title="用户名" ext-class="">
+                        <input bindinput="formInputChange"  class="weui-input" />
+                    </mp-cell>
+                </label>
+                <label>
+                    <mp-cell prop="password" title="密码" ext-class="">
+                        <input data-field="password" bindinput="formInputChange" class="weui-input" />
+                    </mp-cell>
+                </label>
+            </mp-cells>
+        </mp-form>
+
+        <checkbox-group slot="tips" bindchange="bindAgreeChange">
+            <label class="weui-agree">
+                <checkbox class="weui-agree__checkbox-check" />
+
+                <text class="weui-agree__checkbox"></text>
+                <view class="weui-agree__text">阅读并同意使用声明</view>
+            </label>
+        </checkbox-group>
+
+        <view slot="button">
+            <button class="weui-btn" type="primary" bindtap="submitForm">确定</button>
+        </view>
+    </mp-form-page>
+</view>
